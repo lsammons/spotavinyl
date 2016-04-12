@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lsammons/spotavinyl/issues"
   },
-  "homepage": "https://github.com/lsammons/spotavinyl#readme"
+  "homepage": "https://github.com/lsammons/spotavinyl#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
