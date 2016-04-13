@@ -1,0 +1,109 @@
+body {
+	/*margin: 0px;
+	padding: 0px;*/
+	background: #181818;
+	font-family: 'Didact Gothic', sans-serif;
+	font-size: 12pt;
+	font-weight: 200;
+	color: #FFF;
+}
+
+.button {
+	display: inline-block;
+	padding: 1em 2em 1em 2em;
+	letter-spacing: 0.10em;
+	margin-top: 2em;
+	padding: 1.40em 3em;
+	background: #84bd00;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1em;
+	color: #FFF;
+}
+
+/*.button-alt {
+	padding: 1em 2em;
+	border-color: rgba(0,0,0,.8);
+	color: #FFF;
+}*/
+
+#header-wrapper {
+	position: relative;
+	padding: 0em 0em 1em 0em;
+	/*background: #111111 url(/images/header-bg.jpg) no-repeat center;*/
+	background-size: cover;
+}
+
+header {
+		position: relative;
+		padding: 2em 0em;
+}
+
+header img {
+  /*position: absolute;*/
+	padding-top: 3em;
+	padding-left: 3em;
+  height: 50px;
+  display: block;
+}
+
+nav	{
+		position: absolute;
+		top: 4.5em;
+		right: 1em;
+    display: block;
+	}
+
+nav ul
+{
+	display: inline-block;
+}
+
+nav li
+{
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+nav li a, nav li span
+{
+	padding: 1em 1.5em;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	color: rgba(255,255,255,0.80);
+}
+
+/*nav li:hover a, nav li.active a, nav li.active span
+{
+}*/
+
+nav .active a
+{
+	background: #84bd00;
+	border-radius: 6px;
+	color: rgba(255,255,255,1);
+}
+
+/*nav .icon
+{
+}*/
+
+.title
+{
+	margin-bottom: 3em;
+}
+
+.title h1
+{
+	font-size: 2.7em;
+}
+
+.title .byline
+{
+	font-size: 1.3em;
+	color: rgba(255,255,255,0.60);
+}

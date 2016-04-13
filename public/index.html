@@ -3,8 +3,104 @@
   <head>
     <meta charset="utf-8">
     <title>SpotAVinyl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <link rel="stylesheet" href="/vendor/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div id="header-wrapper">
+      <header>
+      	<img src="/images/spotavinylW.png" />
+        <nav>
+    			<ul>
+    				<li class="active"><a href="#">Homepage</a></li>
+    				<li><a href="#">Results</a></li>
+    				<li><a href="#">About Us</a></li>
+    			</ul>
+    		</nav>
+      </header>
+    </div>
+    <main>
+      <section id="homepage" class="title">
+        <h1>Check out our cool thing.</h1>
+			     <p class="byline">You'll be able to buy records based on your Spotify tastes.</p>
+      </section>
+      <section id="results">
+        <h1>Here are you top Artists & Albums</h1>
+			     <p class="byline">Select your top artist or track below to find available records.</p>
+           <h2>Top Artists</h2>
+           <div class="wheel">
+    				<div>
+    					<p>Artist 1</p>
+    					<a href="#" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/">More Info</a>
+    				</div>
+    				<div>
+    					<p>Artist 2</p>
+    					<a href="#" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/">More Info</a>
+    				</div>
+    				<div>
+    					<p>Artist 3</p>
+    					<a href="#" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/">More Info</a>
+    				</div>
+    				<div>
+    					<p>Artist 4</p>
+    					<a href="#" class="button button-alt"><img src="http://lorempixel.com/food/100/100/">More Info</a>
+    				</div>
+    				<div>
+    					<p>Artist 5</p>
+    					<a href="#" class="button button-alt"><img src="http://lorempixel.com/city/100/100/">More Info</a>
+    				</div>
+    				<div>
+    					<p>Artist 6</p>
+    					<a href="#" class="button button-alt"><img src="http://lorempixel.com/fashion/100/100/">More Info</a>
+    				</div>
+    			</div>
+        <h2>Top Tracks</h2>
+        <div class="wheel">
+					<div>
+						<p>Track 1</p>
+						<a href="#" class="button button-alt"><img src="http://lorempixel.com/fashion/100/100/">More Info</a>
+					</div>
+					<div>
+						<p>Track 2</p>
+						<a href="#" class="button button-alt"><img src="http://lorempixel.com/food/100/100/">More Info</a>
+					</div>
+					<div>
+						<p>Track 3</p>
+						<a href="#" class="button button-alt"><img src="http://lorempixel.com/city/100/100/">More Info</a>
+					</div>
+					<div>
+						<p>Track 4</p>
+						<a href="#" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/">More Info</a>
+					</div>
+					<div>
+						<p>Track 5</p>
+						<a href="#" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/">More Info</a>
+					</div>
+					<div>
+						<p>Track 6</p>
+						<a href="#" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/">More Info</a>
+					</div>
+				</div>
+        <section id="buy">
+          <h1>Buy the record here.</h1>
+             <p class="byline">You can select the best deals below and buy your vinyl.</p>
+        </section>
+      </section>
+    <footer>
+    	<p>&copy; Spotavinyl | By LauMadJoe</p>
+    </footer>
+    </main>
+    <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="/vendor/scripts/html5sql.js"></script>
+    <script src="/vendor/scripts/page.js"></script>
+    <script>$.backstretch("/images/header-bg.jpg");</script>
   </body>
 </html>
