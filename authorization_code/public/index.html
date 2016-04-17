@@ -28,8 +28,11 @@
         <div id="oauth">
         </div>
         <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+        <div id="artist-results">
+          <ul></ul>
+        </div>
       </div>
-    </div>
+
 
     <script id="user-profile-template" type="text/x-handlebars-template">
       <h1>Logged in as {{display_name}}</h1>
@@ -59,8 +62,17 @@
       </dl>
     </script>
 
+    <script id= "artist-template" type="text/x-handlebars-template">
+      <li>
+        <div id="pictures"><img src="{{image_url}}" height="100" width="100"></div>
+        <p id="artist name">{{name}}</p>
+      </li>
+    </script>
+
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
     <script>
       (function() {
 
@@ -79,18 +91,32 @@
         }
 
         var userProfileSource = document.getElementById('user-profile-template').innerHTML,
-            userProfileTemplate = Handlebars.compile(userProfileSource),
-            userProfilePlaceholder = document.getElementById('user-profile');
+          userProfileTemplate = Handlebars.compile(userProfileSource),
+          userProfilePlaceholder = document.getElementById('user-profile');
 
         var oauthSource = document.getElementById('oauth-template').innerHTML,
             oauthTemplate = Handlebars.compile(oauthSource),
             oauthPlaceholder = document.getElementById('oauth');
+
+        var artistSource = document.getElementById('artist-template').innerHTML,
+            artistTemplate = Handlebars.compile(artistSource),
+          artistPlaceholder = document.getElementById('artist-results');
+            // var render = function(artist) {
+            //   var template = Handlebars.compile($('#artist-template').text());
+            //   return template(artist);
+            // }
+
+
+        // var artistSource = document.getElementById('artist-template').innerHTML,
+        //     artistTemplate = Handlebars.compile(artistSource),
+        //     artistPlaceholder = document.getElementById('artist-results');
 
         var params = getHashParams();
 
         var access_token = params.access_token,
             refresh_token = params.refresh_token,
             error = params.error;
+        localStorage.setItem('access_token', access_token);
 
         if (error) {
           alert('There was an error during the authentication');
@@ -100,6 +126,51 @@
             oauthPlaceholder.innerHTML = oauthTemplate({
               access_token: access_token,
               refresh_token: refresh_token
+            });
+            var artist = {};
+            artist.all = [];
+
+            // artist.with = function(attr) {
+            //   return artist.all.filter(function(artist) {
+            //     return(artist[attr]);
+            //   });
+            // };
+            access_token = localStorage.getItem('access_token')
+            $.ajax({
+              url: 'https://api.spotify.com/v1/me/top/artists?limit=10',
+              headers: {
+                'Authorization': 'Bearer ' + access_token
+              },
+              success: function(response) {
+                var arr = response.items;
+                console.log(arr);
+
+                artist.all = arr.map(function(item, index){
+
+                  if (item.images.length === 0) {
+                    return {id: index,
+                            name:item.name,
+                            image_url:'http://lorempixel.com/100/100'}
+                    }else {
+                      return {id:index,
+                              name:item.name,
+                              image_url:item.images[0].url}
+                    }
+
+              })
+console.log(artist.all);
+              //   var artist = [];
+              //   artist.push(response.items);
+              //   console.log(artist[0][1]);
+              //
+              artist.all.forEach(function(artist) {
+
+              $('#artist-results ul').append(artistTemplate(artist));
+              })
+
+                $('#login').hide();
+                $('#loggedin').show();
+              }
             });
 
             $.ajax({
@@ -113,6 +184,8 @@
                   $('#login').hide();
                   $('#loggedin').show();
                 }
+
+
             });
           } else {
               // render initial screen
@@ -137,6 +210,6 @@
         }
       })();
     </script>
+
   </body>
 </html>
-

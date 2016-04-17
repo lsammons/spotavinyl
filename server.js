@@ -26,6 +26,16 @@ var generateRandomString = function(length) {
 
 var stateKey = 'spotify_auth_state';
 
+// var proxySpotify = function(request, response) {
+//   console.log('Routing Spotify Request for', request.params[0]);
+//   (requestProxy({
+//     url:'https://api.spotify.com/v1/me' + request.params[0],
+//     headers: {Authorization: 'token ' + process.env.ACCESS_TOKEN }
+//   }))(request,response);
+// };
+//
+// app.get('/spotify/*', proxySpotify);
+
 app.use(express.static(__dirname + '/public'))
     .use(cookieParser());
 

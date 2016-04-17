@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
+
+    <script id="artist-template" type="text/x-handlebars-tempalte">
+      <div>
+        <div id="pictures"><img src="{{image_url}}" height="100" width="100"></div>
+        <p id="artist-name"><{{name}}></p>
+      </div>
+    </script>
 </head>
 
 <body>
@@ -44,38 +51,38 @@
 
                 <div id="banner">
                     <section class="title">
-                        <h1>Here are you top Artists & Albums</h1>
+                        <h1>Here are you top Artists &amp; Albums</h1>
                         <p class="byline">Select your top artist or track below to find available records.</p>
                         <h2>Your Top Artists</h2>
                         <div class="center">
-                            <div id="artist1">
+                            <div id="artist1" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist2">
+                            <div id="artist2" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist3">
+                            <div id="artist3" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist4">
+                            <div id="artist4" class"tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist5">
+                            <div id="artist5" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/city/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist6">
+                            <div id="artist6" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/fashion/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist7">
+                            <div id="artist7" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist8">
+                            <div id="artist8" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist9">
+                            <div id="artist9" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/"></br>More Info</a>
                             </div>
-                            <div id="artist10">
+                            <div id="artist10" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
                             </div>
                         </div>
@@ -109,6 +116,7 @@
     </main>
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/html5sql.js"></script>
+    <script src="/scripts/spotifyArtist.js"></script>
     <script src="/scripts/aboutController.js"></script>
     <script src="/vendor/scripts/page.js"></script>
     <script src="/scripts/routes.js"></script>
