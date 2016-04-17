@@ -23,15 +23,15 @@
             <img src="/images/spotavinylW.png" />
             <nav>
                 <ul>
-                    <li id="homepage" class=""><a href="/index">Homepage</a></li>
-                    <li id="./about" class=""><a href="/about">About Us</a></li>
+                    <li id="homepage" class="homepage"><a href="/index">Homepage</a></li>
+                    <li id="about" class="about"><a href="/about">About Us</a></li>
                 </ul>
             </nav>
         </header>
     </div>
     <main>
         <div id="banner">
-            <section id="homepage" class="title">
+            <section id="homepage" class="title homepage">
                 <h1>Check out our cool thing.</h1>
                 <p class="byline">You'll be able to buy records based on your Spotify tastes.</p>
                 <ul class="actions">
@@ -48,24 +48,35 @@
                         <p class="byline">Select your top artist or track below to find available records.</p>
                         <h2>Your Top Artists</h2>
                         <div class="center">
-
-                            <div>
-                                <a href="#" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>
+                            <div id="artist1">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>
                             </div>
-                            <div>
-                                <a href="#" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
+                            <div id="artist2">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
                             </div>
-                            <div>
-                                <a href="#" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/"></br>More Info</a>
+                            <div id="artist3">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/"></br>More Info</a>
                             </div>
-                            <div>
-                                <a href="#" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
+                            <div id="artist4">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
                             </div>
-                            <div>
-                                <a href="#" class="button button-alt"><img src="http://lorempixel.com/city/100/100/"></br>More Info</a>
+                            <div id="artist5">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/city/100/100/"></br>More Info</a>
                             </div>
-                            <div>
-                                <a href="#" class="button button-alt"><img src="http://lorempixel.com/fashion/100/100/"></br>More Info</a>
+                            <div id="artist6">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/fashion/100/100/"></br>More Info</a>
+                            </div>
+                            <div id="artist7">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>
+                            </div>
+                            <div id="artist8">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
+                            </div>
+                            <div id="artist9">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/"></br>More Info</a>
+                            </div>
+                            <div id="artist10">
+                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
                             </div>
                         </div>
                 </div>
@@ -74,12 +85,14 @@
 
 
         </div>
-        <section id="buy">
-            <h1>Buy the record here.</h1>
-            <p class="byline">You can select the best deals below and buy your vinyl.</p>
-        </section>
         <div id="banner">
-            <section id="about" class="title">
+            <section id="buy">
+                <h1>Buy the record here.</h1>
+                <p class="byline">You can select the best deals below and buy your vinyl.</p>
+            </section>
+        </div>
+        <div id="banner">
+            <section class="title about">
                 <h1>Learn about us.</h1>
                 <p class="byline">We're LauMadJoe.</p>
                 <ul>
@@ -96,6 +109,7 @@
     </main>
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/html5sql.js"></script>
+    <script src="/scripts/aboutController.js"></script>
     <script src="/vendor/scripts/page.js"></script>
     <script src="/scripts/routes.js"></script>
     <script src="/scripts/base.js"></script>

@@ -4,20 +4,20 @@
 
 $.backstretch('/images/header-bg.jpg');
 
-$('#homepage').click(function(e) {
-  e.preventDefault();
-  $(this).addClass('active');
-  $('#about').removeClass('active');
-});
-
 //************************************
 //jQuery for the nav button highlights
 //************************************
 
-$('#about').click(function(e) {
+$('.homepage').click(function(e) {
   e.preventDefault();
   $(this).addClass('active');
-  $('#homepage').removeClass('active');
+  $('.about').removeClass('active');
+});
+
+$('.about').click(function(e) {
+  e.preventDefault();
+  $(this).addClass('active');
+  $('.homepage').removeClass('active');
 });
 
 //***************************

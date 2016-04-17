@@ -29,7 +29,7 @@ var stateKey = 'spotify_auth_state';
 app.use(express.static(__dirname + '/public'))
     .use(cookieParser());
 
-app.get('/', function(req, res) {
+app.get('/index', function(req, res) {
   console.log(req.body);
   res.sendFile(__dirname + '/public/index.html');
 });
@@ -129,6 +129,10 @@ app.get('/results', function(req, res) {
         redirect_uri: redirect_uri,
         state: state
       }));
+});
+
+app.get('/about', function(req, res) {
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(port, function() {
