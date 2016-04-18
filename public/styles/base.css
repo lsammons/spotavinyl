@@ -95,22 +95,22 @@ nav .active a
 {
 }*/
 
-	#banner
+	.banner
 	{
 		text-align: center;
 	}
 
-	#banner .title h1
+	.banner .title h1
 	{
 		font-size: 4em;
 	}
 
-	#banner .title .byline
+	.banner .title .byline
 	{
 		font-size: 2em;
 	}
 
-	#banner .button
+	.banner .button
 	{
 		margin-top: 2em;
 		padding: 1.40em 3em;
