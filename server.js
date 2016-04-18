@@ -76,13 +76,14 @@ app.get('/callback', function(req, res) {
     };
 
     request.post(authOptions, function(error, response, body) {
+      // console.log(body, 'this is the access token')
       if (!error && response.statusCode === 200) {
 
         var access_token = body.access_token,
           refresh_token = body.refresh_token;
 
         var options = {
-          url: 'https://api.spotify.com/v1/me/top/artists',
+          url: 'https://api.spotify.com/v1/me/top/artists?limit=10',
           headers: { 'Authorization': 'Bearer ' + access_token },
           json: true
         };

@@ -3,13 +3,11 @@ $.backstretch('/images/header-bg.jpg');
 
 //For navigation menu buttons
 $('.homepage').click(function(e) {
-  e.preventDefault();
   $(this).addClass('active');
   $('.about').removeClass('active');
 });
 
 $('.about').click(function(e) {
-  e.preventDefault();
   $(this).addClass('active');
   $('.homepage').removeClass('active');
 });
