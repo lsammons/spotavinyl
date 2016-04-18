@@ -1,6 +1,7 @@
 (function(module){
   var artist = {};
   artist.all=[];
+  var artistTemplate = Handlebars.compile($('artist-template').html());
   $.ajax({
     url: 'https://api.spotify.com/v1/me/top/artists?limit=10',
     headers: {
