@@ -23,7 +23,7 @@
     			<ul>
     				<li id="homepage" class=""><a href="/index.html">Homepage</a></li>
     				<!-- <li id="results" class=""><a href="/results">Results</a></li> -->
-    				<li id="about" class=""><a href="/index.html">About Us</a></li>
+    				<li id="about" class=""><a href="/about">About Us</a></li>
     			</ul>
     		</nav>
       </header>
@@ -89,49 +89,6 @@
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/html5sql.js"></script>
     <script src="/vendor/scripts/page.js"></script>
-    <script>
-      $.backstretch("/images/header-bg.jpg");
-
-      $('#homepage').click(function(e) {
-        e.preventDefault();
-        $(this).addClass('active');
-        $('#about').removeClass('active');
-    });
-
-          $('#about').click(function(e) {
-            e.preventDefault();
-            $(this).addClass('active');
-            $('#homepage').removeClass('active');
-        });
-    </script>
-<script>
-
-$('.center').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-  ]
-});
-
-</script>
+  <script src="/scripts/base.js" charset="utf-8"></script>
   </body>
 </html>
