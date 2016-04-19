@@ -19,8 +19,13 @@
   "homepage": "https://github.com/lsammons/spotavinyl#readme",
   "dependencies": {
     "cookie-parser": "^1.4.1",
+<<<<<<< HEAD
     "cookieparser": "^0.1.0",
     "express": "^4.13.4",
+=======
+    "express": "^4.13.4",
+    "nodemon": "^1.9.1",
+>>>>>>> 87d4a7ab7e6305d60fc9193a76f3c272c43e1a33
     "querystring": "^0.2.0",
     "request": "^2.72.0"
   }
