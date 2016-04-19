@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
 
     <script id="artist-template" type="text/x-handlebars-tempalte">
-      <div>
+
+
         <div id="pictures"><img src="{{image_url}}" height="100" width="100"></div>
-        <p id="artist-name"><{{name}}></p>
+        <p id="artist-name">{{name}}</p>
       </div>
+
     </script>
 </head>
 
@@ -55,10 +57,10 @@
                         <p class="byline">Select your top artist or track below to find available records.</p>
                         <h2>Your Top Artists</h2>
                         <div class="center">
-                            <div id="artist1" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>
+                            <div id="artist1" class="button button-alt">
+                                <!--<a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>-->
                             </div>
-                            <div id="artist2" class="tab">
+                            <!--<div id="artist2" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
                             </div>
                             <div id="artist3" class="tab">
@@ -84,7 +86,7 @@
                             </div>
                             <div id="artist10" class="tab">
                                 <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
-                            </div>
+                            </div>-->
                         </div>
                 </div>
             </div>
@@ -116,6 +118,7 @@
     </main>
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/html5sql.js"></script>
+    <script src="/scripts/spotifyToken.js"></script>
     <script src="/scripts/spotifyArtist.js"></script>
     <script src="/scripts/aboutController.js"></script>
     <script src="/vendor/scripts/page.js"></script>

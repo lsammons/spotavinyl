@@ -1,11 +1,11 @@
 (function(module){
   var artist = {};
   artist.all=[];
-  var artistTemplate = Handlebars.compile($('artist-template').html());
+  var artistTemplate = Handlebars.compile($('#artist-template').html());
   $.ajax({
     url: 'https://api.spotify.com/v1/me/top/artists?limit=10',
     headers: {
-      'Authorization': 'Bearer ' + access_token
+      'Authorization': 'Bearer ' + spotify.getAccessToken()
     },
     success: function(response) {
       var arr = response.items;
@@ -25,7 +25,7 @@
       });
       artist.all.forEach(function(artist) {
 
-        $('.center').append(artistTemplate(artist));
+        $('.center .button').append(artistTemplate(artist));
       });
 
       $('#login').hide();
