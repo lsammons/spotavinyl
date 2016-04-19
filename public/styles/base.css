@@ -7,7 +7,6 @@ body {
   font-weight: 200;
   color: #FFF;
 }
-
 .button {
   display: inline-block;
   padding: 1em 2em 1em 2em;
@@ -21,26 +20,22 @@ body {
   font-size: 1em;
   color: #FFF;
 }
-
 .button-alt {
   padding: 1em 2em;
   border-color: rgba(0, 0, 0, .8);
   margin-bottom: 32px;
   /*color: #FFF;*/
 }
-
 #header-wrapper {
   position: relative;
   padding: 0em 0em 1em 0em;
   /*background: #111111 url(/images/header-bg.jpg) no-repeat center;*/
   background-size: cover;
 }
-
 header {
   position: relative;
   padding: 2em 0em;
 }
-
 header img {
   padding-top: 3em;
   padding-left: 3em;
@@ -59,7 +54,6 @@ nav {
 nav ul {
   display: inline-block;
 }
-
 nav li {
   display: block;
   float: left;
@@ -81,19 +75,16 @@ nav .active a {
   color: rgba(255, 255, 255, 1);
 }
 
-#banner {
+.banner {
   text-align: center;
 }
-
-#banner .title h1 {
+.banner .title h1 {
   font-size: 4em;
 }
-
-#banner .title .byline {
+.banner .title .byline {
   font-size: 2em;
 }
-
-#banner .button {
+.banner .button {
   margin-top: 2em;
   padding: 1.40em 3em;
   border-radius: 6px;
@@ -159,14 +150,8 @@ ul.actions li {
 .center {
   color: black;
 }
-
 #results {
   padding-top: 100px;
-}
-
-#about li {
-  list-style-type: none;
-}
 
 footer {
   text-align: center;

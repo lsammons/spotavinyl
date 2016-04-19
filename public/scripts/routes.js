@@ -1,10 +1,5 @@
-
-page('/about', about);
-
-function about() {
-  console.log('this is the about function working');
-  $('section.homepage').hide();
-  $('section.about').show();
-}
-
+page('/', indexController.index);
+page('/index', indexController.index);
+page('/about', aboutController.index);
+page('/results', resultsController.index);
 page();

@@ -1,29 +1,18 @@
-//*************************************************
-// JS for background image and making it responsive
-//*************************************************
-
+//For responsive background image
 $.backstretch('/images/header-bg.jpg');
 
-//************************************
-//jQuery for the nav button highlights
-//************************************
-
+//For navigation menu buttons
 $('.homepage').click(function(e) {
-  e.preventDefault();
   $(this).addClass('active');
   $('.about').removeClass('active');
 });
 
 $('.about').click(function(e) {
-  e.preventDefault();
   $(this).addClass('active');
   $('.homepage').removeClass('active');
 });
 
-//***************************
-// JS for the artist carousel
-//***************************
-
+//Carousel JS stuff
 $('.center').slick({
   centerMode: true,
   centerPadding: '60px',

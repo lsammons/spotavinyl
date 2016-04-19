@@ -29,89 +29,62 @@
 <body>
     <div id="header-wrapper">
         <header>
-            <img src="/images/spotavinylW.png" />
+            <a href="/index"><img src="/images/spotavinylW.png" /></a>
             <nav>
                 <ul>
-                    <li id="homepage" class="homepage"><a href="/index">Homepage</a></li>
-                    <li id="about" class="about"><a href="/about">About Us</a></li>
+                    <a href="/index">
+                        <li class="homepage">Homepage</a>
+                    </li>
+                    <li class="about"><a href="/about">About Us</a></li>
                 </ul>
             </nav>
         </header>
     </div>
     <main>
-        <div id="banner">
-            <section id="homepage" class="title homepage">
+        <div class="banner">
+            <section id="homepage" class="title">
                 <h1>Check out our cool thing.</h1>
                 <p class="byline">You'll be able to buy records based on your Spotify tastes.</p>
                 <ul class="actions">
                     <li><a href="/login" class="btn btn-primary button">Spotify Button to login into your account</a></li>
                 </ul>
             </section>
+          </div>
         </div>
         <div id="results">
             <div id="three-column" class="container">
 
-                <div id="banner">
+                <div class="banner">
                     <section class="title">
                         <h1>Here are you top Artists &amp; Albums</h1>
                         <p class="byline">Select your top artist or track below to find available records.</p>
                         <h2>Your Top Artists</h2>
                         <div class="center">
                             <div id="artist1" class="button button-alt">
-                                <!--<a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>-->
                             </div>
-                            <!--<div id="artist2" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist3" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist4" class"tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist5" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/city/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist6" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/fashion/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist7" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/technics/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist8" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/animals/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist9" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/cats/100/100/"></br>More Info</a>
-                            </div>
-                            <div id="artist10" class="tab">
-                                <a href="http://ebay.com" class="button button-alt"><img src="http://lorempixel.com/food/100/100/"></br>More Info</a>
-                            </div>-->
                         </div>
+                        <section id="buy">
+                            <h1>Buy the record here.</h1>
+                            <p class="byline">You can select the best deals below and buy your vinyl.</p>
+                        </section>
+                    </section>
+
                 </div>
             </div>
-            </section>
-
 
         </div>
-        <div id="banner">
-            <section id="buy">
-                <h1>Buy the record here.</h1>
-                <p class="byline">You can select the best deals below and buy your vinyl.</p>
-            </section>
-        </div>
-        <div id="banner">
-            <section class="title about">
-                <h1>Learn about us.</h1>
-                <p class="byline">We're LauMadJoe.</p>
-                <ul>
-                    <li>Laura</li>
-                    <li>Maddie</li>
+        <div class="banner">
+            <section id="about" class="title">
+                <h1>Information about our team.</h1>
+                <p class="byline">We are LauMadJoe</p>
+                <ul class="actions">
+                    <li>Lau</li>
+                    <li>Mad</li>
                     <li>Joe</li>
                 </ul>
             </section>
         </div>
-        </div>
+
         <footer>
             <p>&copy; Spotavinyl | By LauMadJoe</p>
         </footer>
@@ -120,10 +93,14 @@
     <script src="/vendor/scripts/html5sql.js"></script>
     <script src="/scripts/spotifyToken.js"></script>
     <script src="/scripts/spotifyArtist.js"></script>
-    <script src="/scripts/aboutController.js"></script>
     <script src="/vendor/scripts/page.js"></script>
-    <script src="/scripts/routes.js"></script>
-    <script src="/scripts/base.js"></script>
+    <!-- <script src="/scripts/indexController.js" charset="utf-8"></script>
+    <script src="/scripts/aboutController.js" charset="utf-8"></script>
+    <script src="/scripts/resultsController.js" charset="utf-8"></script> -->
+
+    <script src="/scripts/base.js" charset="utf-8"></script>
+    <script src="/scripts/routes.js" charset="utf-8"></script>
+
 </body>
 
 </html>

@@ -2,9 +2,8 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    console.log('it\'s working');
-    $('#homepage').hide();
-    $('.about').show();
+    $('#homepage, #results').hide();
+    $('#about').fadeIn();
   };
 
   module.aboutController = aboutController;

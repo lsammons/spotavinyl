@@ -2,12 +2,11 @@ var express = require('express');
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
-var app = express();
 var port = process.env.PORT || 8888;
 
-var client_id = '92deea5811614d1696a5352bf5928a47'; // Our client id
-var client_secret = '358fd6a839f74c588ed2cb737667fd52'; // Our client secret
-var redirect_uri = 'http://localhost:8888/callback'; // Our redirect uri
+var client_id = '92deea5811614d1696a5352bf5928a47'; // Your client id
+var client_secret = '358fd6a839f74c588ed2cb737667fd52'; // Your client secret
+var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -26,30 +25,22 @@ var generateRandomString = function(length) {
 
 var stateKey = 'spotify_auth_state';
 
-// var proxySpotify = function(request, response) {
-//   console.log('Routing Spotify Request for', request.params[0]);
-//   (requestProxy({
-//     url:'https://api.spotify.com/v1/me' + request.params[0],
-//     headers: {Authorization: 'token ' + process.env.ACCESS_TOKEN }
-//   }))(request,response);
-// };
-//
-// app.get('/spotify/*', proxySpotify);
+
+var app = express();
 
 app.use(express.static(__dirname + '/public'))
     .use(cookieParser());
 
-app.get('/index', function(req, res) {
-  console.log(req.body);
-  res.sendFile(__dirname + '/public/index.html');
+app.get(function (req, res, next) {
+  if (req.accepts('html')) res.sendFile(__dirname + '/index.html');
 });
 
-//For Spotify login
 app.get('/login', function(req, res) {
+
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
-  //App is requesting authentication authorization
+  // your application requests authorization
   var scope = 'user-top-read user-read-private user-read-email';
   res.redirect('https://accounts.spotify.com/authorize?' +
       querystring.stringify({
@@ -96,7 +87,7 @@ app.get('/callback', function(req, res) {
           refresh_token = body.refresh_token;
 
         var options = {
-          url: 'https://api.spotify.com/v1/me/top/artists',
+          url: 'https://api.spotify.com/v1/me/top/artists?limit=10',
           headers: {
             'Authorization': 'Bearer ' + access_token
           },
@@ -108,41 +99,33 @@ app.get('/callback', function(req, res) {
           console.log(body);
         });
 
-                // we can also pass the token to the browser to make requests from there
+          // we can also pass the token to the browser to make requests from there
         res.redirect('/#' +
-                    querystring.stringify({
-                      access_token: access_token,
-                      refresh_token: refresh_token
-                    }));
+                  querystring.stringify({
+                    access_token: access_token,
+                    refresh_token: refresh_token
+                  }));
       } else {
         res.redirect('/#' +
-            querystring.stringify({
-              error: 'invalid_token'
-            }));
+                  querystring.stringify({
+                    error: 'invalid_token'
+                  }));
       }
     });
   }
 });
 
-//For results page
-app.get('/results', function(req, res) {
-  var state = generateRandomString(16);
-  res.cookie(stateKey, state);
-
-  //App is requesting authentication authorization
-  var scope = 'user-top-read user-read-private user-read-email';
-  res.redirect('https://accounts.spotify.com/authorize?' +
-      querystring.stringify({
-        response_type: 'code',
-        client_id: client_id,
-        scope: scope,
-        redirect_uri: redirect_uri,
-        state: state
-      }));
+// Not sure if this is correct
+app.get('/index', function(req, res) {
+  res.redirect('/index.html');
 });
 
-app.get('/about', function(req, res) {
-  res.sendFile(__dirname + '/public/index.html');
+
+app.get('*', function(request, response) {
+  console.log('New request:', request.url);
+  response.sendFile(__dirname + '/public', {
+    root: '.'
+  });
 });
 
 app.listen(port, function() {

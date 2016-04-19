@@ -1,4 +1,0 @@
-(function(module){
-  spotify = {};
-  spotify.getAccessToken = function
-})
