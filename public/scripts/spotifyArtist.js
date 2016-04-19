@@ -25,7 +25,7 @@
       });
       artist.all.forEach(function(artist) {
 
-        $('.center .button').append(artistTemplate(artist));
+        $('.center').slick('slickAdd', artistTemplate(artist));
       });
 
       $('#login').hide();
