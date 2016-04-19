@@ -25,7 +25,7 @@
       });
       artist.all.forEach(function(artist) {
 
-        $('.center .button').append(artistTemplate(artist));
+        $('.center').append(artistTemplate(artist));
       });
 
       $('#login').hide();
