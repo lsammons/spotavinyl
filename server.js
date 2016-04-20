@@ -31,7 +31,7 @@ var app = express();
 app.use(express.static(__dirname + '/public'))
     .use(cookieParser());
 
-app.get(function (req, res, next) {
+app.get(function(req, res, next) {
   if (req.accepts('html')) res.sendFile(__dirname + '/index.html');
 });
 
@@ -40,7 +40,7 @@ app.get('/login', function(req, res) {
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
-  // your application requests authorization
+    // your application requests authorization
   var scope = 'user-top-read user-read-private user-read-email';
   res.redirect('https://accounts.spotify.com/authorize?' +
       querystring.stringify({
@@ -62,9 +62,9 @@ app.get('/callback', function(req, res) {
 
   if (state === null || state !== storedState) {
     res.redirect('/#' +
-        querystring.stringify({
-          error: 'state_mismatch'
-        }));
+          querystring.stringify({
+            error: 'state_mismatch'
+          }));
   } else {
     res.clearCookie(stateKey);
     var authOptions = {
@@ -99,7 +99,7 @@ app.get('/callback', function(req, res) {
           console.log(body);
         });
 
-          // we can also pass the token to the browser to make requests from there
+              // we can also pass the token to the browser to make requests from there
         res.redirect('/#' +
                   querystring.stringify({
                     access_token: access_token,
