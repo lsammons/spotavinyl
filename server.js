@@ -31,8 +31,17 @@ var app = express();
 app.use(express.static(__dirname + '/public'))
     .use(cookieParser());
 
-app.get(function(req, res, next) {
-  if (req.accepts('html')) res.sendFile(__dirname + '/index.html');
+// app.get(function(req, res, next) {
+//   if (req.accepts('html')) res.sendFile(__dirname + '/index.html');
+// });
+
+app.get('*', function(request, response) {
+  console.log('New request:', request.url);
+  // var p = path.join(__dirname, '/public', 'index.html');
+  p = 'public/index.html';
+  console.log('after the p', p);
+  // console.log(path.join(__dirname, '/public', 'index.html'));
+  response.sendFile(p, { root: '.'});
 });
 
 app.get('/login', function(req, res) {
@@ -115,18 +124,17 @@ app.get('/callback', function(req, res) {
   }
 });
 
-// Not sure if this is correct
-app.get('/index', function(req, res) {
-  res.redirect('/index.html');
-});
+// // Not sure if this is correct
+// app.get('/index', function(req, res) {
+//   res.redirect('/index.html');
+// });
+//
+// app.get('/about', function(req, res) {
+//   res.redirect('/index.html');
+// });
 
 
-app.get('*', function(request, response) {
-  console.log('New request:', request.url);
-  response.sendFile(__dirname + '/public', {
-    root: '.'
-  });
-});
+
 
 app.listen(port, function() {
   console.log('Server running on port: ' + port);
