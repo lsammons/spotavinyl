@@ -2,7 +2,7 @@
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
-  html.push('<table width="75%" border="0" cellspacing="0" cellpadding="3" style="background-color: white;"><tbody>');
+  html.push('<table width="75%" border="0" cellspacing="0" cellpadding="3" style="background-color: white; margin-top: 100px;" id="ebayTable"><tbody>');
   for (var i = 0; i < items.length; ++i) {
     var item     = items[i];
     var title    = item.title;
@@ -15,7 +15,7 @@ function _cb_findItemsByKeywords(root) {
   }
   html.push('</tbody></table>');
   //document.getElementById("results").innerHTML = html.join("");
-  $('#results').append(html.join(""));
+  $('#ebay').append(html.join(""));
 }  // End _cb_findItemsByKeywords() function
 
 // Create a JavaScript array of the item filters you want to use in your request

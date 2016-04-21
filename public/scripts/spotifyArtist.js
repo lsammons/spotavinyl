@@ -36,9 +36,10 @@
   $('button').click(function(e) {
     //e.preventDefault();
     //console.log(data-id);
-    console.log("this is working for all the buttons");
-    console.log(auction.all[$(this).data("id")]);
-      document.body.appendChild(auction.all[$(this).data("id")]);
+    // console.log("this is working for all the buttons");
+    // console.log(auction.all[$(this).data("id")]);
+    $('#ebayTable').remove();
+    document.body.appendChild(auction.all[$(this).data("id")]);
   });
 });
   console.log("at end of spotifyArtist module.");
