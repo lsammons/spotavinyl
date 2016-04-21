@@ -4,13 +4,20 @@ $.backstretch('/images/header-bg.jpg');
 //For navigation menu buttons
 $('.homepage').click(function(e) {
   $(this).addClass('active');
-  $('.about').removeClass('active');
+  $('.about, .results').removeClass('active');
+});
+
+$('.results').click(function(e) {
+  $(this).addClass('active');
+  $('.homepage, .about').removeClass('active');
 });
 
 $('.about').click(function(e) {
   $(this).addClass('active');
-  $('.homepage').removeClass('active');
+  $('.homepage, .results').removeClass('active');
 });
+
+
 
 //Carousel JS stuff
 // $('.centerCarousel').slick({

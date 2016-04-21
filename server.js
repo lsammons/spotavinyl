@@ -35,14 +35,7 @@ app.use(express.static(__dirname + '/public'))
 //   if (req.accepts('html')) res.sendFile(__dirname + '/index.html');
 // });
 
-app.get('*', function(request, response) {
-  console.log('New request:', request.url);
-  // var p = path.join(__dirname, '/public', 'index.html');
-  p = 'public/index.html';
-  console.log('after the p', p);
-  // console.log(path.join(__dirname, '/public', 'index.html'));
-  response.sendFile(p, { root: '.'});
-});
+
 
 app.get('/login', function(req, res) {
 
@@ -109,7 +102,7 @@ app.get('/callback', function(req, res) {
         });
 
               // we can also pass the token to the browser to make requests from there
-        res.redirect('/#' +
+        res.redirect('/results#' +
                   querystring.stringify({
                     access_token: access_token,
                     refresh_token: refresh_token
@@ -132,7 +125,12 @@ app.get('/callback', function(req, res) {
 // app.get('/about', function(req, res) {
 //   res.redirect('/index.html');
 // });
-
+app.get('*', function(request, response) {
+  console.log('New request:', request.url);
+  // p = 'public/index.html';
+  // console.log('after the p', p);
+  response.sendFile('public/index.html', { root: '.'});
+});
 
 
 
