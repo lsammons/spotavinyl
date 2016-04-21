@@ -7,6 +7,5 @@
     $('#homepage').fadeIn();
   };
 
-
   module.indexController = indexController;
 })(window);

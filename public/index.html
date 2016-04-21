@@ -7,22 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" /> -->
+    <!-- <link rel="stylesheet" href="vendor/styles/tinycarousel.css">
+    <script type="text/javascript" src="vendor/scripts/tinycarousel/jquery.tinycarousel.js"></script>
+    <script type="text/javascript" src="vendor/scripts/tinycarousel/jquery.tinycarousel.min.js"></script> -->
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="/styles/layout.css">
     <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
 
     <script id="artist-template" type="text/x-handlebars-tempalte">
-
-<div>
-          <div id="pictures"><img src="{{image_url}}" height="100" width="100">
-        <p id="artist-name">{{name}}</p>
-      </div>
-
+        <div class="button">
+            <div id="pictures"><img src="{{image_url}}" height="100" width="100"></div>
+            <p id="artist-name">{{name}}</p>
+        </div>
     </script>
 </head>
 
@@ -32,9 +33,8 @@
             <a href="/index"><img src="/images/spotavinylW.png" /></a>
             <nav>
                 <ul>
-                    <a href="/index">
-                        <li class="homepage">Homepage</a>
-                    </li>
+                    <li class="homepage"><a href="/index">Homepage</a></li>
+                    <li class="results"><a href="/results">Results</a></li>
                     <li class="about"><a href="/about">About Us</a></li>
                 </ul>
             </nav>
@@ -43,41 +43,33 @@
     <main>
         <div class="banner">
             <section id="homepage" class="title">
-                <h1>Check out our cool thing.</h1>
-                <p class="byline">You'll be able to buy records based on your Spotify tastes.</p>
+                <h1>Welcome To SpotAVinyl</h1>
+                  <p class="byline">You'll be able to buy vinyl records based on your Spotify tastes.<br /> Click the button below to give us a "spin".</p>
                 <ul class="actions">
-                    <li><a href="/login" class="btn btn-primary button">Spotify Button to login into your account</a></li>
+                    <li><a href="/login" class="btn btn-primary button">Log into your Spotify account</a></li>
                 </ul>
             </section>
-          </div>
         </div>
         <div id="results">
             <div id="three-column" class="container">
-
                 <div class="banner">
                     <section class="title">
-                        <h1>Here are you top Artists &amp; Albums</h1>
-                        <p class="byline">Select your top artist or track below to find available records.</p>
-                        <h2>Your Top Artists</h2>
-                        <div class="center">
-                            <div id="artist1" class="button button-alt center">
-                            </div>
-                        </div>
+                        <!-- <h1>Your Top 10 Artists Are:</h1> -->
+                        <p class="byline">Click on one of your top 10 artists below to find their vinyl on eBay.</p>
+                        <div class="artistButtons centerCarousel"></div>
                         <section id="buy">
                             <h1>Buy the record here.</h1>
                             <p class="byline">You can select the best deals below and buy your vinyl.</p>
                             <div id="eBayVinyl"></div>
                         </section>
                     </section>
-
                 </div>
             </div>
-
         </div>
         <div class="banner">
             <section id="about" class="title">
-                <h1>Information about our team.</h1>
-                <p class="byline">We are LauMadJoe</p>
+                <h1>Team LauMadJoe</h1>
+                <p class="byline">We are LauMadJoe from Code Fellows 301.</p>
                 <ul class="actions">
                     <li>Lau</li>
                     <li>Mad</li>
@@ -85,7 +77,6 @@
                 </ul>
             </section>
         </div>
-
         <footer>
             <p>&copy; Spotavinyl | By LauMadJoe</p>
         </footer>
@@ -95,13 +86,11 @@
     <script src="/scripts/spotifyToken.js"></script>
     <script src="/scripts/spotifyArtist.js"></script>
     <script src="/vendor/scripts/page.js"></script>
-    <!-- <script src="/scripts/indexController.js" charset="utf-8"></script>
+    <script src="/scripts/indexController.js" charset="utf-8"></script>
     <script src="/scripts/aboutController.js" charset="utf-8"></script>
-    <script src="/scripts/resultsController.js" charset="utf-8"></script> -->
-
+    <script src="/scripts/resultsController.js" charset="utf-8"></script>
     <script src="/scripts/base.js" charset="utf-8"></script>
     <script src="/scripts/routes.js" charset="utf-8"></script>
 
 </body>
-
 </html>
