@@ -37,8 +37,10 @@
     //e.preventDefault();
     //console.log(data-id);
     // console.log("this is working for all the buttons");
-    // console.log(auction.all[$(this).data("id")]);
+    //console.log(auction.all[$(this).data("id")]);
     $('#ebayTable').remove();
+    // console.log(this);
+    $(this).css("background-color: red");
     document.body.appendChild(auction.all[$(this).data("id")]);
   });
 });
