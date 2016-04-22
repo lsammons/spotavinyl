@@ -26,7 +26,7 @@ var filterarray = [
    "paramName":"Currency",
    "paramValue":"USD"},
   {"name":"ListingType",
-   "value":["Auction"],
+   "value": ["AuctionWithBIN", "FixedPrice", "StoreInventory"],
    "paramName":"",
    "paramValue":""},
   ];
