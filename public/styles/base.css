@@ -1,12 +1,12 @@
-body {
+/*body {
   /*margin: 0px;
 	padding: 0px;*/
-  background: #181818;
+  /*background: #181818;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 12pt;
   font-weight: 200;
   color: #FFF;
-}
+}*/
 /*.green {
   color: #84bd00;
 }*/
@@ -35,7 +35,7 @@ body {
   /*background: #111111 url(/images/header-bg.jpg) no-repeat center;*/
   background-size: cover;
 }
-header {
+/*header {
   position: relative;
   padding: 2em 0em;
 }
@@ -44,7 +44,7 @@ header img {
   padding-left: 3em;
   height: 50px;
   display: block;
-}
+}*/
 
 nav {
   position: absolute;
@@ -57,13 +57,13 @@ nav {
 nav ul {
   display: inline-block;
 }
-nav li {
+.tab {
   display: block;
   float: left;
   text-align: center;
 }
 
-nav li a, nav li span {
+.tab a, .tab span {
   padding: 1em 1.5em;
   letter-spacing: 1px;
   text-decoration: none;
@@ -123,9 +123,9 @@ ul.actions li {
   font-size: 2em;
 }
 
-#three-column .title h2 {
+/*#three-column .title h2 {
   font-weight: bold;
-}
+*/
 
 #three-column .title .byline {
   text-align: center;
