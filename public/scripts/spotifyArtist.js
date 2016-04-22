@@ -31,7 +31,17 @@
       $('#login').hide();
       $('#loggedin').show();
     }
+  }).done(function() {
+  // kick off getAuction function in ebayAuction.js
+  auction.getAuction();
+  // click on spotify artist button will show auction data at bottom of page
+  $('button').click(function(e) {
+    // remove the previous ebay auction results before displaying new
+    $('#ebayTable').remove();
+    // append ebay results to bottom of page
+    document.body.appendChild(auction.all[$(this).data("id")]);
   });
-
+});
+  console.log("at end of spotifyArtist module.");
   module.artist = artist;
 })(window);
