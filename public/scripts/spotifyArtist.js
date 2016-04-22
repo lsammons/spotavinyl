@@ -42,6 +42,6 @@
     document.body.appendChild(auction.all[$(this).data("id")]);
   });
 });
-  console.log("at end of spotifyArtist module.");
+  //console.log("at end of spotifyArtist module.");
   module.artist = artist;
 })(window);

@@ -1,6 +1,7 @@
 // Parse the response and build an HTML table to display search results
-function _cb_findItemsByKeywords(root) {
-  var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
+// function _cb_findItemsByKeywords(root) {
+function _cb_findItemsAdvanced  (root) {
+  var items = root.findItemsAdvancedResponse[0].searchResult[0].item || [];
   var html = [];
   html.push('<table width="75%" border="0" cellspacing="0" cellpadding="3" id="ebayTable"><tbody>');
   for (var i = 0; i < items.length; ++i) {
@@ -21,19 +22,14 @@ function _cb_findItemsByKeywords(root) {
 // Create a JavaScript array of the item filters you want to use in your request
 var filterarray = [
   {"name":"MaxPrice",
-   "value":"25",
+   "value":"10000",
    "paramName":"Currency",
    "paramValue":"USD"},
-  {"name":"FreeShippingOnly",
-   "value":"true",
-   "paramName":"",
-   "paramValue":""},
   {"name":"ListingType",
-   "value":["AuctionWithBIN", "FixedPrice", "StoreInventory"],
+   "value":["Auction"],
    "paramName":"",
    "paramValue":""},
   ];
-
 
 // Define global variable for the URL filter
 var urlfilter = "";
