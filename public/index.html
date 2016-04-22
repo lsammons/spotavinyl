@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <title>SpotAVinyl</title>
+      <meta charset="utf-8">
+      <title>SpotAVinyl</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <link href="http://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+      <link rel="stylesheet" href="vendor/styles/normalize.css">
+      <link rel="stylesheet" href="/styles/base.css">
+      <link rel="stylesheet" href="/styles/layout.css">
+      <link rel="stylesheet" href="/styles/modules.css">
+
+      <script id="artist-template" type="text/x-handlebars-template">
+          <button class="button" data-id="{{id}}">
+            <div >
+              <div id="pictures"><img src="{{image_url}}" height="100" width="100"></div>
+              <p id="artist-name">{{name}}</p>
+            </div>
+          </button>
+      </script>
   </head>
+
   <body>
-    <h1>Hello World!</h1>
+      <div id="header-wrapper">
+          <header>
+              <a href="/index"><img src="/images/spotavinylW.png" /></a>
+              <nav>
+                  <ul>
+                      <li class="tab" id="homepage-tab"><a href="/index">Homepage</a></li>
+                      <li class="tab" id="results-tab"><a href="/results">Results</a></li>
+                      <li class="tab" id="about-tab"><a href="/about">About Us</a></li>
+                  </ul>
+              </nav>
+          </header>
+      </div>
+      <main>
+          <div class="banner">
+              <section id="homepage" class="title">
+                  <h1>Welcome To SpotAVinyl</h1>
+                    <p class="byline">You'll be able to buy vinyl records based on your Spotify tastes.<br /> Click the button below to give us a "spin".</p>
+                  <ul class="actions">
+                      <li><a href="/login" class="btn btn-primary button">Log into your Spotify account</a></li>
+                  </ul>
+              </section>
+          </div>
+          <div id="results">
+              <div id="three-column" class="container">
+                  <div class="banner">
+                      <section class="title">
+                          <!-- <h1>Your Top 10 Artists Are:</h1> -->
+                          <p class="byline">Click on one of your top 10 artists<br>to find their vinyl on eBay.</p>
+                          <div class="artistButtons"></div>
+                          <section id="buy">
+                              <h1>Buy the record here.</h1>
+                              <p class="byline">You can select the best deals below and buy your vinyl.</p>
+                              <div id="results"><div id="ebay"></div></div>
+                          </section>
+                      </section>
+                  </div>
+              </div>
+          </div>
+          <div class="banner">
+              <section id="about" class="title">
+                  <h1>Team LauMadJoe</h1>
+                  <img src="images/laumadjoe.jpg" alt="Photo of Laura, Maddie, and Joe" width="50%" height="50%" />
+                  <p class="aboutUs">We are LauMadJoe from Code Fellows 301. We created this project so that people that love Spotify can easily find vinyl to purchase. </p>
+                  <ul class="bio">
+                      <li>Laura is a webdev by day and superhero by night. My github user profile is: <a href="https://github.com/lsammons" target="_blank">github.com/lsammons</a></li>
+                      <li>Maddie is an avid basketfall lover. Go Warriors!</li>
+                      <li>Joe is a sci-fi geek. Starbuck and Adama 2016! My github user profile is: <a href="https://github.com/joedouble" target="_blank">github.com/joedouble</a></li>
+                  </ul>
+              </section>
+          </div>
+          <footer>
+              <p>&copy; Spotavinyl | By LauMadJoe</p>
+          </footer>
+      </main>
+      <script src="/vendor/scripts/handlebars.js"></script>
+      <script src="/vendor/scripts/html5sql.js"></script>
+      <script src="/scripts/spotifyToken.js"></script>
+      <script src="/scripts/spotifyArtist.js"></script>
+      <script src="/scripts/ebayAuction.js"></script>
+      <script src="/scripts/ebayCall.js"></script>
+      <script src="/vendor/scripts/page.js"></script>
+      <script src="/scripts/indexController.js" charset="utf-8"></script>
+      <script src="/scripts/aboutController.js" charset="utf-8"></script>
+      <script src="/scripts/resultsController.js" charset="utf-8"></script>
+      <script src="/scripts/base.js" charset="utf-8"></script>
+      <script src="/scripts/routes.js" charset="utf-8"></script>
   </body>
 </html>
