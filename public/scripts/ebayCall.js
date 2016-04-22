@@ -65,42 +65,6 @@ function  buildURLArray() {
 // Execute the function to build the URL filter
 buildURLArray(filterarray);
 
-
-
-// Construct the request has been moved into ebayAuction.js
-// creates unique url for each artist as they pass through a for loop
-// Replaced with our Production AppID in string
+// Declare global url for building up ebay GET call query string
+// This reates unique url for each artist as they pass through a for loop, in ebayAuction.js
 var url; //
-
-
-// Submit the request
-// s=document.createElement('script'); // create script element
-// s.src= url;
-
-
-// get data from clicked element, from data-dash attribute
-// $('button').click(function(e) {
-//   //e.preventDefault();
-//   //console.log(data-id);
-//
-//   console.log("this is working for all the button");
-//     //document.body.appendChild(s);
-// });
-
-// $('button').attr('data-id')click(function(){
-
-// val = $(this).attr('data-category');
-//         optionTag = '<option value="' + val + '">' + val + '</option>';
-//         if ($('#category-filter option[value="' + val + '"]').length === 0) {
-//           $('#category-filter').append(optionTag);
-//         }
-//
-// $('#0').click(function(){
-//   console.log();
-//   console.log("Click happened on test 0");
-//     document.body.appendChild(s);
-// });
-
-// Display the request as a clickable link for testing
-//document.write("<a href=\"" + url + "\">" + url + "</a>");
-console.log("At end of ebayCall");
