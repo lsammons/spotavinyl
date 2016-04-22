@@ -4,3 +4,33 @@ header img {
   height: 50px;
   display: block;
 }
+
+#ebayTable {
+   background: rgba(192, 192, 192, 0.90);
+   border-radius: 6px;
+   margin: auto;
+   color: black;
+  margin-top: 5em;
+}
+
+#ebayTable a {
+     color: black;
+     font-size: 1.5em;
+     text-decoration: none;
+     border-bottom: 5px;
+}
+
+#ebayTable a:hover {
+     color: #006400;
+     font-size: 1.5em;
+     font-weight: bolder;
+}
+
+td {
+      border-bottom: 1px solid #ddd;
+}
+
+td img {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
