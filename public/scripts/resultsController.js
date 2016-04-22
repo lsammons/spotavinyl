@@ -4,8 +4,8 @@
   resultsController.index = function() {
     $('#homepage, #about').hide();
     $('#results').fadeIn();
-    $('.results').addClass('active');
-    $('.homepage, .about').removeClass('active');
+    $('#results-tab').addClass('active');
+    $('#homepage-tab, #about-tab').removeClass('active');
   };
 
   module.resultsController = resultsController;

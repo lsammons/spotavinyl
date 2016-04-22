@@ -5,9 +5,9 @@
   indexController.index = function() {
     $('#results, #about').hide();
     $('#homepage').fadeIn();
-    $('.homepage').addClass('active');
-    $('.about, .results').removeClass('active');
-    
+    $('#homepage-tab').addClass('active');
+    $('#about-tab, #results-tab').removeClass('active');
+
   };
 
   module.indexController = indexController;

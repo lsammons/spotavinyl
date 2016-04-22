@@ -4,9 +4,9 @@
   aboutController.index = function() {
     $('#homepage, #results').hide();
     $('#about').fadeIn();
-    $('.about').addClass('active');
-    $('.homepage, .results').removeClass('active');
-  
+    $('#about-tab').addClass('active');
+    $('#homepage-tab, #results-tab').removeClass('active');
+
   };
 
   module.aboutController = aboutController;
