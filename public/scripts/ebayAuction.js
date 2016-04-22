@@ -16,7 +16,7 @@
           url += "&callback=_cb_findItemsAdvanced";
           url += "&REST-PAYLOAD";
           url += "&keywords=" + artist.all[i].name + "";
-          url += "&paginationInput.entriesPerPage=10";
+          url += "&paginationInput.entriesPerPage=5";
           url += "&categoryId=176985";
           url += urlfilter;
           //s.src= url;
