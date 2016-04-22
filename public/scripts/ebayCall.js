@@ -2,7 +2,7 @@
 function _cb_findItemsByKeywords(root) {
   var items = root.findItemsByKeywordsResponse[0].searchResult[0].item || [];
   var html = [];
-  html.push('<table width="75%" border="0" cellspacing="0" cellpadding="3" style="background-color: white; margin-top: 100px;" id="ebayTable"><tbody>');
+  html.push('<table width="75%" border="0" cellspacing="0" cellpadding="3" id="ebayTable"><tbody>');
   for (var i = 0; i < items.length; ++i) {
     var item     = items[i];
     var title    = item.title;
