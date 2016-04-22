@@ -10,9 +10,7 @@
       }
       return hashParams;
     }
-    //
-    // if(localStorage.hasOwnProperty('access_token') === false) {
-    //   console.log('false');
+
     var params = getHashParams();
     localStorage.setItem('access_token', params.access_token);
     localStorage.setItem('refresh_token', params.refresh_token);
@@ -20,12 +18,6 @@
 
       return params.access_token;
     }
-    // }else if(localStorage.getItem('access_token') === params.access_token) {
-    //   console.log('true');
-    //   return params.access_token;
-    // } else {
-    //   localStorage.setItem('refresh_token', params.refresh_token);
-    //   return params.refresh_token;
   };
 
 

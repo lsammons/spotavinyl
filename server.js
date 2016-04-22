@@ -4,8 +4,8 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var port = process.env.PORT || 8888;
 
-var client_id = '92deea5811614d1696a5352bf5928a47'; // Your client id
-var client_secret = '358fd6a839f74c588ed2cb737667fd52'; // Your client secret
+var client_id = clientId; // Your client id
+var client_secret = clientSecret; // Your client secret
 var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 /**
@@ -25,24 +25,16 @@ var generateRandomString = function(length) {
 
 var stateKey = 'spotify_auth_state';
 
-
 var app = express();
 
 app.use(express.static(__dirname + '/public'))
     .use(cookieParser());
-
-// app.get(function(req, res, next) {
-//   if (req.accepts('html')) res.sendFile(__dirname + '/index.html');
-// });
-
-
 
 app.get('/login', function(req, res) {
 
   var state = generateRandomString(16);
   res.cookie(stateKey, state);
 
-    // your application requests authorization
   var scope = 'user-top-read user-read-private user-read-email';
   res.redirect('https://accounts.spotify.com/authorize?' +
       querystring.stringify({
@@ -56,8 +48,6 @@ app.get('/login', function(req, res) {
 
 app.get('/callback', function(req, res) {
 
-    // your application requests refresh and access tokens
-    // after checking the state parameter
   var code = req.query.code || null;
   var state = req.query.state || null;
   var storedState = req.cookies ? req.cookies[stateKey] : null;
@@ -117,22 +107,10 @@ app.get('/callback', function(req, res) {
   }
 });
 
-// // Not sure if this is correct
-// app.get('/index', function(req, res) {
-//   res.redirect('/index.html');
-// });
-//
-// app.get('/about', function(req, res) {
-//   res.redirect('/index.html');
-// });
 app.get('*', function(request, response) {
   console.log('New request:', request.url);
-  // p = 'public/index.html';
-  // console.log('after the p', p);
   response.sendFile('public/index.html', { root: '.'});
 });
-
-
 
 app.listen(port, function() {
   console.log('Server running on port: ' + port);

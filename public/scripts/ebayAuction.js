@@ -26,6 +26,5 @@
     }
   }
 
-  //console.log("at end of ebayAuctions module.");
   module.auction = auction;
 })(window);
