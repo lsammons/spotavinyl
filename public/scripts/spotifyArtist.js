@@ -37,6 +37,8 @@
   // click on spotify artist button will show auction data at bottom of page
   $('button').click(function(e) {
     // remove the previous ebay auction results before displaying new
+    $('#buy h1').show();
+    $('#buy .byline').show();
     $('#ebayTable').remove();
     // append ebay results to bottom of page
     document.body.appendChild(auction.all[$(this).data("id")]);
