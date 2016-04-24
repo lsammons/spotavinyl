@@ -4,6 +4,7 @@ header {
 }
 
 body {
+  display: none;
   background: #181818;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 12pt;
