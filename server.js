@@ -4,9 +4,9 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var port = process.env.PORT || 8888;
 
-var client_id = process.env.clientId; // Your client id
-var client_secret = process.env.clientSecret; // Your client secret
-var redirect_uri = 'http://pure-beach-98863.herokuapp.com/callback'; // Your redirect uri
+var client_id = '92deea5811614d1696a5352bf5928a47'; // Your client id
+var client_secret = '358fd6a839f74c588ed2cb737667fd52'; // Your client secret
+var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -42,7 +42,8 @@ app.get('/login', function(req, res) {
         client_id: client_id,
         scope: scope,
         redirect_uri: redirect_uri,
-        state: state
+        state: state,
+        show_dialog: true
       }));
 });
 
