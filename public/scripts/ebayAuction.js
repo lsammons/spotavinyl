@@ -19,7 +19,6 @@
           url += "&paginationInput.entriesPerPage=5";
           url += "&categoryId=176985";
           url += urlfilter;
-          //s.src= url;
           s=document.createElement('script'); // create script element
           s.src= url;
           auction.all.push(s);

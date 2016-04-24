@@ -28,8 +28,6 @@
       artist.all.forEach(function(artist) {
       $('.artistButtons').append(artistTemplate(artist))//.wrapInner('<a href="#ebay"></a>');
       });
-
-
   }
 })
 .done(function() {
@@ -37,7 +35,6 @@
   auction.getAuction();
   auctionView.buttonClick();
   // click on spotify artist button will show auction data at bottom of page
-
 })
 
 };
