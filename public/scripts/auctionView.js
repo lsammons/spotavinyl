@@ -10,6 +10,6 @@
       // append ebay results to bottom of page
       document.body.appendChild(auction.all[$(this).data('id')]);
     });
-  }
-  module.auctionView = auctionView
+  };
+  module.auctionView = auctionView;
 })(window);
