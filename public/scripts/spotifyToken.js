@@ -18,8 +18,8 @@
 
       return params.access_token;
     }
-  };
 
+  };
 
   module.spotify = spotify;
 })(window);
