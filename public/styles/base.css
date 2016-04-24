@@ -1,0 +1,25 @@
+body {
+  background: #181818;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 12pt;
+  font-weight: 200;
+  color: #FFF;
+  display: none;
+}
+header {
+  position: relative;
+  padding: 2em 0em;
+}
+nav {
+  position: absolute;
+  top: 2.5em;
+  right: 1em;
+  display: block;
+  font-size: 1.5em;
+}
+nav ul {
+  display: inline-block;
+}
+footer {
+  text-align: center;
+}
