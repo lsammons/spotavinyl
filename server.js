@@ -6,7 +6,7 @@ var port = process.env.PORT || 8888;
 
 var client_id = process.env.clientId; // Your client id
 var client_secret = process.env.clientSecret; // Your client secret
-var redirect_uri = 'http://pure-beach-98863.herokuapp.com/callback'; // Your redirect uri
+var redirect_uri = 'http://spotavinyl.herokuapp.com/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
