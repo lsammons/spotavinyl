@@ -2,6 +2,8 @@
   var artist = {};
   artist.all=[];
   var artistTemplate = Handlebars.compile($('#artist-template').html());
+  artist.getArtists = function(callback) {
+
   $.ajax({
     url: 'https://api.spotify.com/v1/me/top/artists?limit=10',
     headers: {
@@ -24,25 +26,20 @@
 
       });
       artist.all.forEach(function(artist) {
-
-        $('.artistButtons').append(artistTemplate(artist));
+      $('.artistButtons').append(artistTemplate(artist))//.wrapInner('<a href="#ebay"></a>');
       });
 
-      $('#login').hide();
-      $('#loggedin').show();
-    }
-  }).done(function() {
+
+  }
+})
+.done(function() {
   // kick off getAuction function in ebayAuction.js
   auction.getAuction();
+  auctionView.buttonClick();
   // click on spotify artist button will show auction data at bottom of page
-  $('button').click(function(e) {
-    // remove the previous ebay auction results before displaying new
-    $('#buy h1').show();
-    $('#buy .byline').show();
-    $('#ebayTable').remove();
-    // append ebay results to bottom of page
-    document.body.appendChild(auction.all[$(this).data("id")]);
-  });
-});
+
+})
+
+};
   module.artist = artist;
 })(window);

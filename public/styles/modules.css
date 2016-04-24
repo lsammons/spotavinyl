@@ -1,9 +1,99 @@
 header img {
   padding-top: 3em;
   padding-left: 3em;
-  height: 50px;
+  height: 4em;
   display: block;
 }
+
+.button {
+  display: inline-block;
+  padding: 1em 2em 1em 2em;
+  letter-spacing: 0.10em;
+  margin-top: 2em;
+  padding: 1.40em 3em;
+  background: #84bd00;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1em;
+  color: #FFF;
+}
+.button-alt {
+  padding: 1em 2em;
+  border-color: rgba(0, 0, 0, .8);
+  margin-bottom: 32px;
+  /*color: #FFF;*/
+}
+
+.tab {
+  display: block;
+  float: left;
+  text-align: center;
+}
+
+.tab a, .tab span {
+  padding: 1em 1.5em;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+nav .active a {
+  background: #84bd00;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.banner {
+  text-align: center;
+  margin-bottom:5em;
+}
+.banner .title h1 {
+  font-size: 5em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.banner .title .byline {
+  font-size: 3em;
+  margin-top: 1em;
+  margin-bottom: -.5em;
+}
+.banner .button {
+  margin-top: 2em;
+  padding: 1.40em 3em;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1em;
+}
+.actions li {
+  display: inline-block;
+  padding: 0em 0.50em;
+}
+#results {
+  margin-top: -5em;
+}
+
+#three-column .fa{
+  display: block;
+  padding: 1em 0em;
+  /*color: rgba(0,0,0,1);*/
+  font-size: 2em;
+
+}
+
+#three-column .title .byline {
+  text-align: center;
+}
+
+.clicked {
+  background: rgba(0,100,0,0.90);
+}
+
+.unclicked {
+  background: #84bd00;
+}
+
 
 #ebayTable {
    background: rgba(192, 192, 192, 0.90);
