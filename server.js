@@ -4,9 +4,9 @@ var querystring = require('querystring');
 var cookieParser = require('cookie-parser');
 var port = process.env.PORT || 8888;
 
-var client_id = '92deea5811614d1696a5352bf5928a47'; // Our client id
-var client_secret = '358fd6a839f74c588ed2cb737667fd52'; // Our client secret
-var redirect_uri = 'http://localhost:8888/callback'; // Our redirect uri
+var client_id = process.env.clientId; // Your client id
+var client_secret = process.env.clientSecret; // Your client secret
+var redirect_uri = 'http://pure-beach-98863.herokuapp.com/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
