@@ -20,6 +20,5 @@
     }
   };
 
-
   module.spotify = spotify;
 })(window);
