@@ -124,3 +124,7 @@ td img {
   padding-top: .5em;
   padding-bottom: .5em;
 }
+
+.bio li {
+  list-style: none;
+}

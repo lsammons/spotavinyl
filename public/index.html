@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
       <meta charset="utf-8">
       <title>SpotAVinyl</title>
@@ -12,7 +11,6 @@
       <link rel="stylesheet" href="/styles/base.css">
       <link rel="stylesheet" href="/styles/layout.css">
       <link rel="stylesheet" href="/styles/modules.css">
-
       <script id="artist-template" type="text/x-handlebars-template">
           <button class="button" data-id="{{id}}">
             <div >
@@ -21,9 +19,7 @@
             </div>
           </button>
       </script>
-
   </head>
-
   <body>
       <div id="header-wrapper">
           <header>
@@ -43,34 +39,24 @@
                   <h1>Welcome To SpotAVinyl</h1>
                     <p class="byline">You'll be able to buy vinyl records based on your Spotify tastes.<br /> Click the button below to give us a "spin".</p>
                     <p><a href="/login" class="button">Log into your Spotify account</a></p>
-
               </section>
-          <!--</div>-->
-
-              <!--<div id="three-column" class="banner">-->
-
-                      <section id="results" class="title">
-                          <!-- <h1>Your Top 10 Artists Are:</h1> -->
-                          <p class="byline">Click on one of your top 10 artists<br>to find their vinyl on eBay.</p>
-                          <div class="artistButtons"></div>
-                          <section id="buy">
-                              <h1>Buy the record here.</h1>
-                              <p class="byline">You can select the best deals below and buy your vinyl.</p>
-                              <div id="ebay"></div>
-                              <a href="#results"><p id="backButton" class="button"> Back to Artists </p></a>
-                          </section>
-                      </section>
-
-              <!--</div>-->
-
-          <!--<div class="banner">-->
+              <section id="results" class="title">
+                  <p class="byline">Click on one of your top 10 artists<br>to find their vinyl on eBay.</p>
+                  <div class="artistButtons"></div>
+                  <section id="buy">
+                      <h1>Buy the record here.</h1>
+                      <p class="byline">You can select the best deals below and buy your vinyl.</p>
+                      <div id="ebay"></div>
+                      <a href="#results"><p id="backButton" class="button"> Back to Artists </p></a>
+                  </section>
+              </section>
               <section id="about" class="title">
                   <h1>Team LauMadJoe</h1>
                   <img src="images/laumadjoe.jpg" alt="Photo of Laura, Maddie, and Joe" width="50%" height="50%" />
                   <p class="aboutUs">We are LauMadJoe from Code Fellows 301. We created this project so that people that love Spotify can easily find vinyl to purchase. </p>
                   <ul class="bio">
-                      <li>Laura is a webdev by day and superhero by night. My github user profile is: <a href="https://github.com/lsammons" target="_blank">github.com/lsammons</a></li>
-                      <li>Maddie is an avid basketfall lover. Go Warriors!</li>
+                      <li>Laura is a crazy music fan! My github user profile is: <a href="https://github.com/lsammons" target="_blank">github.com/lsammons</a></li>
+                      <li>Maddie is an avid basketball lover. Go Warriors! My github user profile is: <a href="https://github.com/lsammons" target="_blank">github.com/jdar22169</a></li>
                       <li>Joe is a sci-fi geek. Starbuck and Adama 2016! My github user profile is: <a href="https://github.com/joedouble" target="_blank">github.com/joedouble</a></li>
                   </ul>
               </section>
@@ -92,7 +78,6 @@
       <script src="/scripts/indexController.js" charset="utf-8"></script>
       <script src="/scripts/aboutController.js" charset="utf-8"></script>
       <script src="/scripts/resultsController.js" charset="utf-8"></script>
-      <!--<script src="/scripts/resultsRefresh.js"></script>-->
       <script src="/scripts/base.js" charset="utf-8"></script>
       <script src="/scripts/routes.js" charset="utf-8"></script>
   </body>
