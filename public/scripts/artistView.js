@@ -6,10 +6,6 @@
     $('#buy h1').hide();
     $('#buy .byline').hide();
     $('#backButton').hide();
-    //page('/results' + '/refresh');
   };
-
-
-
   module.artistView = artistView;
 })(window);

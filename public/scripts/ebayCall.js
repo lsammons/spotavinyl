@@ -28,7 +28,7 @@ var filterarray = [
    "value": ["AuctionWithBIN", "FixedPrice", "StoreInventory"],
    "paramName":"",
    "paramValue":""},
-  ];
+];
 
 // Define global variable for the URL filter
 var urlfilter = "";
@@ -45,8 +45,8 @@ function  buildURLArray() {
       if (itemfilter[index] !== "") {
         if (itemfilter[index] instanceof Array) {
           for(var r=0; r<itemfilter[index].length; r++) {
-          var value = itemfilter[index][r];
-          urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
+            var value = itemfilter[index][r];
+            urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
           }
         }
         else {
@@ -55,7 +55,7 @@ function  buildURLArray() {
       }
     }
   }
-}  
+}
 
 // Execute the function to build the URL filter
 buildURLArray(filterarray);
