@@ -1,19 +1,11 @@
-header {
+#header-wrapper {
   position: relative;
-  padding: 2em 0em;
+  padding: 0em 0em 1em 0em;
+  /*background: #111111 url(/images/header-bg.jpg) no-repeat center;*/
+  background-size: cover;
 }
 
-
-body {
-  /*margin: 0px;
-	padding: 0px;*/
-  background: #181818;
-  font-family: 'Didact Gothic', sans-serif;
-  font-size: 12pt;
-  font-weight: 200;
-  color: #FFF;
-}
-
-footer {
-  text-align: center;
+#wrapper {
+  position: relative;
+  padding: 1em 0em 7em 0em;
 }

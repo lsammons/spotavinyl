@@ -44,32 +44,32 @@
           </header>
       </div>
       <main>
-          <div class="banner">
+          <div id="three-column" class="banner">
               <section id="homepage" class="title">
                   <h1>Welcome To SpotAVinyl</h1>
                     <p class="byline">You'll be able to buy vinyl records based on your Spotify tastes.<br /> Click the button below to give us a "spin".</p>
-                  <ul class="actions">
-                      <li><a href="/login" class="btn btn-primary button">Log into your Spotify account</a></li>
-                  </ul>
+                    <p><a href="/login" class="button">Log into your Spotify account</a></p>
+
               </section>
-          </div>
-          <div id="results">
-              <div id="three-column" class="container">
-                  <div class="banner">
-                      <section class="title">
+          <!--</div>-->
+
+              <!--<div id="three-column" class="banner">-->
+
+                      <section id="results" class="title">
                           <!-- <h1>Your Top 10 Artists Are:</h1> -->
                           <p class="byline">Click on one of your top 10 artists<br>to find their vinyl on eBay.</p>
                           <div class="artistButtons"></div>
                           <section id="buy">
                               <h1>Buy the record here.</h1>
                               <p class="byline">You can select the best deals below and buy your vinyl.</p>
-                              <div id="results"><div id="ebay"></div></div>
+                              <div id="ebay"></div>
+                              <a href="#results"><p id="backButton" class="button"> Back to Artists </p></a>
                           </section>
                       </section>
-                  </div>
-              </div>
-          </div>
-          <div class="banner">
+
+              <!--</div>-->
+
+          <!--<div class="banner">-->
               <section id="about" class="title">
                   <h1>Team LauMadJoe</h1>
                   <p class="byline">We are LauMadJoe from Code Fellows 301.</p>
@@ -90,10 +90,14 @@
       <script src="/scripts/spotifyArtist.js"></script>
       <script src="/scripts/ebayAuction.js"></script>
       <script src="/scripts/ebayCall.js"></script>
+      <script src="/scripts/artistView.js"></script>
+      <script src="/scripts/auctionView.js"></script>
+      <script src="/scripts/indexView.js"></script>
       <script src="/vendor/scripts/page.js"></script>
       <script src="/scripts/indexController.js" charset="utf-8"></script>
       <script src="/scripts/aboutController.js" charset="utf-8"></script>
       <script src="/scripts/resultsController.js" charset="utf-8"></script>
+      <!--<script src="/scripts/resultsRefresh.js"></script>-->
       <script src="/scripts/base.js" charset="utf-8"></script>
       <script src="/scripts/routes.js" charset="utf-8"></script>
   </body>
